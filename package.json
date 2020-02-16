@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next -p 8081",
-    "start": "next start",
-    "test": "NODE_ENV=test jest --watch",
-    "aws-build": "next build",
+    "dev": "parcel src/index.html",
+    "start": "parcel src/index.html --out-dir build",
+    "build": "parcel build src/index.html --out-dir build --public-url ./",
+    "eject": "react-scripts eject",
     "linte": "eslint ./components/*.js?",
     "lint:styled": "stylelint './components/styles/**/*.js'"
   },
@@ -23,6 +23,7 @@
   "homepage": "https://github.com/ebuyco/Ehooks_React#readme",
   "dependencies": {
     "next": "^9.2.1",
+    "parcel-bundler": "^1.12.4",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
@@ -53,56 +54,12 @@
     "stylelint-processor-styled-components": "^1.9.0"
   },
   "babel": {
-    "env": {
-      "development": {
-        "presets": [
-          "next/babel"
-        ],
-        "plugins": [
-          [
-            "styled-components",
-            {
-              "ssr": true,
-              "displayName": true
-            }
-          ]
-        ]
-      },
-      "production": {
-        "presets": [
-          "next/babel"
-        ],
-        "plugins": [
-          [
-            "styled-components",
-            {
-              "ssr": true,
-              "displayName": true
-            }
-          ]
-        ]
-      },
-      "test": {
-        "presets": [
-          [
-            "next/babel",
-            {
-              "preset-env": {
-                "modules": "commonjs"
-              }
-            }
-          ]
-        ],
-        "plugins": [
-          [
-            "styled-components",
-            {
-              "ssr": true,
-              "displayName": true
-            }
-          ]
-        ]
-      }
-    }
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties"
+    ]
   }
 }
