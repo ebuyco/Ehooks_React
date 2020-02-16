@@ -8,6 +8,7 @@
     "start": "next start",
     "test": "NODE_ENV=test jest --watch",
     "aws-build": "next build",
+    "linte": "eslint ./components/*.js?",
     "lint:styled": "stylelint './components/styles/**/*.js'"
   },
   "repository": {
