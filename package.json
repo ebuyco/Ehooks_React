@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel src/index.html",
+    "dev": "parcel src/index.html -p 8181",
     "start": "parcel src/index.html --out-dir build",
     "build": "parcel build src/index.html --out-dir build --public-url ./",
     "eject": "react-scripts eject",
