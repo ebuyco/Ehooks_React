@@ -1,5 +1,3 @@
-import React from 'react';
-
 const slugify = str => {
   str = str || '';
 
@@ -21,10 +19,12 @@ const slugify = str => {
     .replace(/ψ/g, 'ps')
     .replace(/\//g, '-')
     .replace(/\s+/g, '-')
+    .replace(/[^\w-]+/g, '')
+    .replace(/--+/g, '-')
+    .replace(/-+$/, '')
     .replace(p, c => b.charAt(a.indexOf(c)))
     .replace(/&/g, '-and-')
     .replace(/[^\w\-]+/g, '')
-    .replace(/\-\-+/g, '-')
     .replace(/^-+/, '')
     .replace(/-+$/, '');
 };

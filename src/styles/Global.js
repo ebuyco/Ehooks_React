@@ -16,8 +16,8 @@ const GlobalStyles = createGlobalStyle`
   font-style: normal;
 }
 @font-face {
-  font-family: 'Raleway-Bold';
-  src: url('../../public/static/Raleway-Bold.ttf');
+  font-family: 'Raleway-Medium';
+  src: url('../../public/static/Raleway-Medium.ttf');
   font-weight: normal;
   font-style: normal;
 }

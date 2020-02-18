@@ -38942,7 +38942,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  height: 100%;\n  .header__wrapper {\n    display: flex;\n    width: 100%;\n    max-width: 80%;\n    justify-content: center;\n    align-items: center;\n    align-content: center;\n    text-align: center;\n    color: #ffffff;\n    cursor: pointer;\n    background: #00bbd3;\n    margin: 2rem auto 0 auto;\n    font-family: 'Raleway-Medium';\n  }\n  .homepage__router {\n    color: #ffffff;\n    padding: 1rem;\n    text-align: center;\n    font-size: 1.5rem;\n    flex: 2;\n    &:active,\n    &:focus,\n    &:focus-within {\n      border-bottom: 2px solid #ffffff;\n    }\n  }\n  .addProduct__wrapper {\n    width: 100%;\n    max-width: 80%;\n    margin: 0 auto;\n  }\n  .form--addProduct {\n    width: 100%;\n    margin: 0 auto;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  height: 100%;\n  .header__wrapper {\n    display: flex;\n    width: 100%;\n    max-width: 50%;\n    justify-content: center;\n    align-items: center;\n    align-content: center;\n    text-align: center;\n    color: #ffffff;\n    cursor: pointer;\n    background: #00bbd3;\n    margin: 2rem auto 0 auto;\n    font-family: 'Raleway-Medium';\n    padding: 2rem;\n  }\n  .homepage__router {\n    color: #ffffff;\n    padding: 2rem;\n    text-align: center;\n    font-size: 1.5rem;\n    &:active,\n    &:focus,\n    &:focus-within {\n      border-bottom: 1px solid #ffffff;\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -39067,12 +39067,14 @@ var App = function App() {
   }, _react.default.createElement(_Global.default, null), _react.default.createElement(_HomepageStyle.default, null, _react.default.createElement("header", {
     className: "header__wrapper"
   }, _react.default.createElement(_reactRouterDom.Link, {
-    className: "homepage__router",
     to: "/"
-  }, "Products"), _react.default.createElement(_reactRouterDom.Link, {
-    to: "/add-product",
+  }, _react.default.createElement("a", {
     className: "homepage__router"
-  }, "Add Product")), _react.default.createElement("main", null, _react.default.createElement(_Cart.default, {
+  }, "Products")), _react.default.createElement(_reactRouterDom.Link, {
+    to: "/add-product"
+  }, _react.default.createElement("a", {
+    className: "homepage__router"
+  }, "Add Product"))), _react.default.createElement("main", null, _react.default.createElement(_Cart.default, {
     cart: cart
   }), _react.default.createElement(_reactRouterDom.Route, {
     exact: true,
@@ -39280,7 +39282,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56553" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53319" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
