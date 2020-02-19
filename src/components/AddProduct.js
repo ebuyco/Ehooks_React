@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import slugify from '../utils/slugify';
+import AddProductStyle from '../styles/AddProductStyle';
 
 const AddProduct = props => {
   const [name, setName] = useState();
@@ -36,9 +37,9 @@ const AddProduct = props => {
   };
 
   return (
-    <div className="addProduct__wrapper">
+    <AddProductStyle className="addProduct__wrapper">
       <form onSubmit={addProduct} className="form--addProduct">
-        <h1>Add Product</h1>
+        <h1 className="add__products__caption">Add Product</h1>
         <div className="addProduct__wrapper__name">
           <label>Name:</label>
           <input required onChange={handleChangeName} />
@@ -57,7 +58,7 @@ const AddProduct = props => {
         </div>
         <input type="submit" value="Add" className="button__Addproduct" />
       </form>
-    </div>
+    </AddProductStyle>
   );
 };
 

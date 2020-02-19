@@ -38711,7 +38711,35 @@ var slugify = function slugify(str) {
 
 var _default = slugify;
 exports.default = _default;
-},{}],"components/AddProduct.js":[function(require,module,exports) {
+},{}],"styles/AddProductStyle.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  max-width: 80%;\n  margin: 0 auto;\n\n  .form--addProduct {\n    width: 100%;\n    margin: 0 auto;\n  }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var AddProductStyle = _styledComponents.default.div(_templateObject());
+
+var _default = AddProductStyle;
+exports.default = _default;
+},{"styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js"}],"components/AddProduct.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -38722,6 +38750,8 @@ exports.default = void 0;
 var _react = _interopRequireWildcard(require("react"));
 
 var _slugify = _interopRequireDefault(require("../utils/slugify"));
+
+var _AddProductStyle = _interopRequireDefault(require("../styles/AddProductStyle"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -38786,12 +38816,14 @@ var AddProduct = function AddProduct(props) {
     setImage(e.target.value);
   };
 
-  return _react.default.createElement("div", {
+  return _react.default.createElement(_AddProductStyle.default, {
     className: "addProduct__wrapper"
   }, _react.default.createElement("form", {
     onSubmit: addProduct,
     className: "form--addProduct"
-  }, _react.default.createElement("h1", null, "Add Product"), _react.default.createElement("div", {
+  }, _react.default.createElement("h1", {
+    className: "add__products__caption"
+  }, "Add Product"), _react.default.createElement("div", {
     className: "addProduct__wrapper__name"
   }, _react.default.createElement("label", null, "Name:"), _react.default.createElement("input", {
     required: true,
@@ -38820,7 +38852,7 @@ var AddProduct = function AddProduct(props) {
 
 var _default = AddProduct;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","../utils/slugify":"utils/slugify.js"}],"components/SingleProduct.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../utils/slugify":"utils/slugify.js","../styles/AddProductStyle":"styles/AddProductStyle.js"}],"components/SingleProduct.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -38942,7 +38974,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  height: 100%;\n  .header__wrapper {\n    display: flex;\n    width: 100%;\n    max-width: 80%;\n    justify-content: center;\n    align-items: center;\n    align-content: center;\n    text-align: center;\n    color: #ffffff;\n    cursor: pointer;\n    background: #00bbd3;\n    margin: 2rem auto 0 auto;\n    font-family: 'Raleway-Medium';\n  }\n  .homepage__router {\n    color: #ffffff;\n    padding: 1rem;\n    text-align: center;\n    font-size: 1.5rem;\n    flex: 2;\n    &:active,\n    &:focus,\n    &:focus-within {\n      border-bottom: 2px solid #ffffff;\n    }\n  }\n  .addProduct__wrapper {\n    width: 100%;\n    max-width: 80%;\n    margin: 0 auto;\n  }\n  .form--addProduct {\n    width: 100%;\n    margin: 0 auto;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  height: 100%;\n  .header__wrapper {\n    display: flex;\n    width: 100%;\n    max-width: 80%;\n    justify-content: center;\n    align-items: center;\n    align-content: center;\n    text-align: center;\n    color: #ffffff;\n    cursor: pointer;\n    background: #00bbd3;\n    margin: 2rem auto 0 auto;\n    font-family: 'Raleway-Medium';\n  }\n  .homepage__router {\n    color: #ffffff;\n    padding: 1rem;\n    text-align: center;\n    font-size: 1.5rem;\n    flex: 2;\n    &:active,\n    &:focus,\n    &:focus-within {\n      border-bottom: 2px solid #ffffff;\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -39280,7 +39312,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56553" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51216" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
