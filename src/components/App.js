@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  // Link,
+  Route,
+  NavLink,
+} from 'react-router-dom';
 import GlobalStyle from '../styles/Global';
 import AddProduct from './AddProduct';
 import SingleProduct from './SingleProduct';
@@ -55,12 +60,21 @@ const App = () => {
         <GlobalStyle />
         <HomepageStyle>
           <header className="header__wrapper">
-            <Link className="homepage__router" to="/">
+            <NavLink
+              className="homepage__router"
+              activeClassName="active"
+              exact
+              to="/"
+            >
               Products
-            </Link>
-            <Link to="/add-product" className="homepage__router">
+            </NavLink>
+            <NavLink
+              to="/add-product"
+              activeClassName="active"
+              className="homepage__router"
+            >
               Add Product
-            </Link>
+            </NavLink>
           </header>
           <main>
             <Cart cart={cart} />
