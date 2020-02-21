@@ -32,7 +32,7 @@ const AddProductStyle = styled.div`
     padding: 0.333rem;
     border-radius: 1rem;
     width: 100%;
-    max-width: 20%;
+    max-width: 50%;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -41,6 +41,12 @@ const AddProductStyle = styled.div`
     cursor: pointer;
     color: #fff;
     border: none;
+  }
+  label {
+    flex: 0 0 90px;
+  }
+  input {
+    flex: 0 1 800px;
   }
 `;
 

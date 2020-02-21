@@ -38724,7 +38724,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  max-width: 80%;\n  margin: 0 auto;\n\n  .form--addProduct {\n    width: 100%;\n    margin: 0 auto;\n    color: #000;\n    background-color: #fff;\n    padding: 2rem;\n  }\n  .add__products__caption {\n    text-align: center;\n    margin-top: 2rem;\n    color: #000000;\n  }\n  .addProduct__wrapper__name,\n  .addProduct__wrapper__price,\n  .addProduct__wrapper__description,\n  .addProduct__wrapper__image {\n    margin: 0 auto;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n  }\n\n  .button__Addproduct {\n    margin: 0 auto;\n    padding: 0.333rem;\n    border-radius: 1rem;\n    width: 100%;\n    max-width: 20%;\n    text-align: center;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    background: #3e50b4;\n    cursor: pointer;\n    color: #fff;\n    border: none;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  max-width: 80%;\n  margin: 0 auto;\n\n  .form--addProduct {\n    width: 100%;\n    margin: 0 auto;\n    color: #000;\n    background-color: #fff;\n    padding: 2rem;\n  }\n  .add__products__caption {\n    text-align: center;\n    margin-top: 2rem;\n    color: #000000;\n  }\n  .addProduct__wrapper__name,\n  .addProduct__wrapper__price,\n  .addProduct__wrapper__description,\n  .addProduct__wrapper__image {\n    margin: 0 auto;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n  }\n\n  .button__Addproduct {\n    margin: 0 auto;\n    padding: 0.333rem;\n    border-radius: 1rem;\n    width: 100%;\n    max-width: 50%;\n    text-align: center;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    background: #3e50b4;\n    cursor: pointer;\n    color: #fff;\n    border: none;\n  }\n  label {\n    flex: 0 0 90px;\n  }\n  input {\n    flex: 0 1 800px;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -39315,7 +39315,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56451" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62033" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
